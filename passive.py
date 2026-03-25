@@ -233,7 +233,7 @@ def get_certificate_transparency(target):
     return target
 
 def get_infrastructure(target):
-    print("Enriching infrastructure data...")
+    print("Collecting infrastructure data...")
 
     ips = getattr(target, "infrastructure_ips", [])
 
@@ -273,7 +273,7 @@ def get_ip_info(ip):
 
 
 def get_archived_docs(target):
-    print("Enriching archived documents...")
+    print("Searching for archived documents...")
     base_url = f"https://web.archive.org/cdx/search/cdx?url=*.{target.domain}/*&output=json&fl=original&collapse=urlkey"
 
     extensions = ["pdf", "doc", "docx"]
@@ -335,6 +335,7 @@ def build_metadata(target):
 
 # RISK ASSESSMENT
 def assess_domain(target):
+    print("Assessing risks...")
     notes = []
     risk = "Low"
 

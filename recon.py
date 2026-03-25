@@ -33,7 +33,7 @@ def main():
     target = get_infrastructure(target)
     target = get_archived_docs(target)
     target = build_risk_assessment(target)
-    generate_report(target, sys.argv[3])
+    generate_report(target, sys.argv[2])
 
 
 if __name__ == "__main__":

@@ -147,6 +147,9 @@ def format_metadata_summary(target):
 def format_metadata_preview(data):
     preview = data[:MAX_ROWS]
 
+    if not data:
+        return "<tr><td colspan='2'>No findings</td></tr>"
+
     rows = ""
 
     for url, ftype, info in preview:
