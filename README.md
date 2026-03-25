@@ -67,13 +67,13 @@ You will need a **VirusTotal API Key**:
 ### Basic command
 
 ```bash id="y82kfd"
-python recon.py <domain> <username> <api_key>
+python3 recon.py <domain> <username> <api_key>
 ```
 
 ### Example
 
 ```bash id="w3x9lm"
-python recon.py example.com Gabriel YOUR_API_KEY
+python3 recon.py example.com Gabriel YOUR_API_KEY
 ```
 
 ---
