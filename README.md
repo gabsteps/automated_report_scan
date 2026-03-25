@@ -44,29 +44,8 @@ cd your-repo
 
 ---
 
-### 2. Create a virtual environment (recommended)
 
-```bash id="m2pq8k"
-python -m venv venv
-```
-
-Activate it:
-
-* Windows:
-
-```bash id="d9q1xe"
-venv\Scripts\activate
-```
-
-* Linux/Mac:
-
-```bash id="z7k2lp"
-source venv/bin/activate
-```
-
----
-
-### 3. Install dependencies
+### 2. Install dependencies
 
 ```bash id="a8vn3t"
 pip install -r requirements.txt
