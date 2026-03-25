@@ -2,8 +2,11 @@ from pathlib import Path
 from string import Template
 from datetime import datetime
 
-MAX_ROWS = 10
+# RECEIVES EVERY COLLECTED DATA AND ASSEMBLE ON HTML TEMPLATE
 
+MAX_ROWS = 10 # max rows for metadata preview
+
+# handle different data types from api's
 def format_date(date_value):
     if not date_value:
         return "N/A"

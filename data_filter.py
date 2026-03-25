@@ -4,7 +4,7 @@ import domain
 def define_domain(raw_whois):
     domain_target = domain.Domain() #initialize domain class as domain_target
 
-    # fullfill domain_target class attributes
+    # fulfill domain_target class attributes
     domain_target.domain = raw_whois.get('domain_name')
     domain_target.registrar = raw_whois.get('registrar')
     domain_target.registrar_url = raw_whois.get('registrar_url')
@@ -25,7 +25,7 @@ def define_domain(raw_whois):
     domain_target.name_servers = raw_whois.get('name_servers')
     domain_target.dnssec = raw_whois.get('dnssec')
     domain_target.raw_whois = raw_whois
-    domain_target.raw_split = raw_whois # necessário verificar
+    domain_target.raw_split = raw_whois
     domain_target.whois_server = raw_whois.get('whois_server')
     domain_target.emails_found = raw_whois.get('emails')
     #domain_target.contacts_count = raw_whois.get('')

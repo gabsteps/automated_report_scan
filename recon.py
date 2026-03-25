@@ -21,7 +21,7 @@ def passive_recon(target):
 def userdata():
     user_data = user
     user_data.name = sys.argv[2]
-    user_data.api_key = sys.argv[3] #using for tests, remember to remove
+    user_data.api_key = sys.argv[3]
     return user_data
 
 def main():
