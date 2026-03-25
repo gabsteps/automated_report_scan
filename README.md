@@ -137,7 +137,7 @@ Based on:
 * WHOIS data may be incomplete or obfuscated
 * Subdomain discovery depends on public certificates
 * No active scanning (passive OSINT only)
-* Metadata findings may be inconsistent
+* Public documents findings may be inconsistent
 
 ---
 
