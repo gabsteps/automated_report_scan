@@ -38,8 +38,8 @@ This tool performs:
 ### 1. Clone the repository
 
 ```bash id="fgh9de"
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/gabsteps/automated_report_scan
+cd automated_report_scan
 ```
 
 ---
