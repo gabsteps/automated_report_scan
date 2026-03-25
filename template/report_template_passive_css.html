@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Passive Report</title>
+
+    <style>
+
+        /* ===== Reset básico ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ===== Base ===== */
+        body {
+            font-family: "Segoe UI", Roboto, Arial, sans-serif;
+            line-height: 1.7;
+            color: #2c2c2c;
+            background: #f4f6f9;
+            padding: 40px 20px;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        /* ===== Header ===== */
+        h1 {
+            font-size: 32px;
+            color: #1a365d;
+            margin-bottom: 20px;
+            border-bottom: 4px solid #2b6cb0;
+            padding-bottom: 12px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 15px;
+            color: #2b6cb0;
+            border-left: 5px solid #2b6cb0;
+            padding-left: 12px;
+        }
+
+        h3 {
+            margin-top: 25px;
+            color: #1a365d;
+        }
+
+        /* ===== Texto ===== */
+        p {
+            margin: 12px 0;
+        }
+
+        /* ===== Notice box (legal notice etc) ===== */
+        .notice {{
+            background: #fff7e6;
+            border-left: 6px solid #f59e0b;
+            padding: 18px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }}
+
+        /* ===== Executive summary / highlight box ===== */
+        .highlight {{
+            background: #edf2f7;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }}
+
+        /* ===== Tables ===== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Header tabela */
+        th {{
+            background: #2b6cb0;
+            color: white;
+            padding: 14px;
+            text-align: left;
+            font-weight: 600;
+        }}
+
+        /* Células */
+        td {
+            padding: 14px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        /* Zebra rows */
+        tr:nth-child(even) {{
+            background: #f8fafc;
+        }}
+
+        /* Hover tabela (fica bonito no HTML) */
+        tr:hover {{
+            background: #edf2f7;
+        }}
+
+        /* ===== Lists ===== */
+        ul {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+
+        li {
+            margin: 6px 0;
+        }
+
+        /* ===== Separador ===== */
+        hr {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 40px 0;
+        }
+
+        /* ===== Code / technical data ===== */
+        code {
+            background: #edf2f7;
+            padding: 4px 8px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* ===== Risk levels (se quiser usar depois) ===== */
+        .risk-low {
+            color: #2f855a;
+            font-weight: bold;
+        }
+
+        .risk-medium {
+            color: #d69e2e;
+            font-weight: bold;
+        }
+
+        .risk-high {
+            color: #c53030;
+            font-weight: bold;
+        }
+
+        .risk-low::before {
+            content: "🟢 ";
+        }
+
+        .risk-medium::before {
+            content: "🟡 ";
+        }
+
+        .risk-high::before {
+            content: "🔴 ";
+        }
+
+        .status-active {
+            color: #2f855a;
+            font-weight: bold;
+        }
+
+        .status-inactive {
+            color: #c53030;
+            font-weight: bold;
+        }
+        .wildcard {
+            color: #d69e2e;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1 id="passive-reconnaissance-report">
+        Passive Reconnaissance Report
+    </h1>
+
+    <p>
+        <strong>Project:</strong> Passive Reconnaissance Assessment<br/>
+        <strong>Author:</strong> $name <br />
+        <strong>Date:</strong> $date <br />
+        <strong>Target:</strong> $target
+    </p>
+
+    <hr />
+
+    <h2 id="legal-ethical-notice">⚠️ Legal &amp; Ethical Notice</h2>
+
+    <p>
+        This report was generated <strong>exclusively using passive
+        reconnaissance techniques</strong>. No direct interaction, scanning,
+        probing, or traffic was sent to the target infrastructure. All
+        information was obtained from publicly available sources.
+    </p>
+
+    <hr />
+
+    <h2 id="executive-summary">Executive Summary</h2>
+
+    <p>
+        This document presents the results of a <strong>passive
+        reconnaissance assessment</strong>, aiming to identify publicly exposed
+        information related to the target that could contribute to its external
+        attack surface.
+    </p>
+
+    <h3 id="high-level-overview">High-Level Overview</h3>
+
+    <ul>
+        <li><strong>Public Domains Identified:</strong> <number></li>
+        <li><strong>Known Subdomains (Passive Sources):</strong> <number></li>
+        <li><strong>Public IP Ranges Associated:</strong> <number></li>
+        <li><strong>Exposed Metadata &amp; OSINT Artifacts:</strong> <yes/no></li>
+        <li><strong>Overall Exposure Level:</strong> Low / Medium / High</li>
+    </ul>
+
+    <blockquote>
+        <p>This section is intended for management and non-technical stakeholders.</p>
+    </blockquote>
+
+    <hr />
+
+    <h2 id="scope-methodology">Scope &amp; Methodology</h2>
+
+    <h3 id="scope">Scope</h3>
+
+    <ul>
+        <li>Target: $target</li>
+        <li>Reconnaissance Type: Passive Only</li>
+        <li>
+            Exclusions:
+            <ul>
+                <li>No port scanning</li>
+                <li>No service probing</li>
+                <li>No DNS brute-force</li>
+                <li>No HTTP/HTTPS requests for enumeration</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3 id="methodology">Methodology</h3>
+
+    <p>
+        The assessment relied solely on: - Public registration databases -
+        Certificate transparency logs - Passive DNS datasets - Search engine
+        indexing - Public code repositories - Archived web data
+    </p>
+
+    <hr />
+
+    <h2 id="organizational-domain-intelligence">Organizational &amp; Domain Intelligence</h2>
+
+    <h3 id="whois-information">Whois Information</h3>
+
+    <table>
+        <thead>
+            <tr class="header">
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="odd">
+                <td>Domain Name</td>
+                <td>$domain_name</td>
+            </tr>
+            <tr class="even">
+                <td>Registrar</td>
+                <td>$registrar</td>
+            </tr>
+            <tr class="odd">
+                <td>Creation Date</td>
+                <td>$generation_date</td>
+            </tr>
+            <tr class="even">
+                <td>Expiration Date</td>
+                <td>$expiration_date</td>
+            </tr>
+            <tr class="odd">
+                <td>Registrant Organization</td>
+                <td>$org</td>
+            </tr>
+            <tr class="even">
+                <td>Registrant Country</td>
+                <td>$country</td>
+            </tr>
+            <tr class="odd">
+                <td>Name Servers</td>
+                <td>$name_servers</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3 id="observations">Observations</h3>
+
+    <ul>
+        <li>Domain registration details reveal organizational structure</li>
+        <li>Expiration timelines may indicate operational maturity</li>
+    </ul>
+
+    <hr />
+
+    <h2 id="passive-dns-intelligence">Public DNS Intelligence</h2>
+
+    <h3 id="known-dns-records-historical-passive">
+        Known DNS Records (Historical / Passive)
+    </h3>
+
+    <table>
+        <thead>
+            <tr class="header">
+                <th>Record Type</th>
+                <th>Observed Value</th>
+                <th>First Seen</th>
+                <th>Last Seen</th>
+                <th>Source</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="odd">
+                $dns_records
+            </tr>
+        </tbody>
+    </table>
+
+    <blockquote>
+        <p>
+            Records listed here were collected from public DNS repositories and
+            historical datasets.
+        </p>
+    </blockquote>
+
+    <hr />
+
+    <h2 id="subdomain-enumeration-passive-sources-only">
+        Subdomain Enumeration (Passive Sources Only)
+    </h2>
+
+    <h3 id="identified-subdomains">Identified Subdomains</h3>
+
+    <table>
+        <thead>
+            <tr class="header">
+                <th>Subdomain</th>
+                <th>First Seen</th>
+                <th>Last Seen</th>
+                <th>Source</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            $subdomains
+        </tbody>
+    </table>
+
+    <h3 id="observations-1">Observations</h3>
+
+    <ul>
+        <li>Development-related subdomains may indicate internal environments</li>
+        <li>Historical presence may suggest legacy infrastructure</li>
+    </ul>
+
+    <hr />
+
+    <h2 id="certificate-transparency-analysis">Certificate Transparency Analysis</h2>
+
+    <h3 id="certificates-observed">Certificates Observed</h3>
+
+    <table>
+        <thead>
+            <tr class="header">
+                <th>Domain / SAN</th>
+                <th>Issuer</th>
+                <th>First Seen</th>
+                <th>Last Seen</th>
+            </tr>
+        </thead>
+        <tbody>
+            $certificates
+        </tbody>
+    </table>
+
+    <h3 id="key-findings">Key Findings</h3>
+
+    <ul>
+        <li>Presence of wildcard certificates suggests multiple subdomains</li>
+        <li>Certificate issuers and timelines provide insight into infrastructure lifecycle</li>
+    </ul>
+
+    <hr />
+
+    <h2 id="ip-infrastructure-attribution">IP &amp; Infrastructure Attribution</h2>
+
+    <h3 id="public-ip-ranges-associated">Public IP Ranges Associated</h3>
+
+    <table>
+        <thead>
+            <tr class="header">
+                <th>IP / Range</th>
+                <th>ASN</th>
+                <th>Organization</th>
+                <th>Country</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            $ip_infra
+        </tbody>
+    </table>
+
+    <h3 id="observations-2">Observations</h3>
+
+    <ul>
+        <li>Infrastructure hosted by third-party providers</li>
+        <li>ASN attribution may reveal cloud or on-premise usage</li>
+    </ul>
+
+    <hr/>
+
+    <h2 id="osint-public-exposure">OSINT &amp; Public Exposure</h2>
+
+    <h3 id="publicly-indexed-assets">Publicly Indexed Assets</h3>
+
+    <ul>
+        <li>Archived pages in public web archives</li>
+        <li>Public documents containing metadata</li>
+    </ul>
+
+    <h3 id="metadata-findings">Metadata Findings</h3>
+
+    <ul>
+        <li>If findings are greater than 10, full list will be at the end of report</li>
+    </ul>
+
+    $metadata_summary
+
+    <table>
+        <thead>
+            <tr class="header">
+                <th>URL</th>
+                <th>Artifact</th>
+                <th>Information Disclosed</th>
+            </tr>
+        </thead>
+        <tbody>
+            $metadata_preview
+        </tbody>
+    </table>
+
+    <hr/>
+
+    <h2 id="risk-assessment-passive">Risk Assessment (Passive)</h2>
+
+    <table>
+        <thead>
+            <tr class="header">
+                <th>Exposure Category</th>
+                <th>Risk Level</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            $risk_table
+        </tbody>
+    </table>
+
+    <p><strong>Overall Risk Exposure Rating:</strong> <span class="risk-$overall_risk">$overall_risk</span> </p>
+
+    <hr />
+
+    <h2 id="recommendations-non-intrusive">Recommendations (Non-Intrusive)</h2>
+
+    <ul>
+        <li>Review publicly accessible documents for metadata leaks</li>
+        <li>Audit certificate issuance and unused subdomains</li>
+        <li>Monitor certificate transparency logs continuously</li>
+        <li>Implement domain and brand monitoring</li>
+    </ul>
+
+    <hr />
+
+    <h2 id="limitations">Limitations</h2>
+
+    <p>
+        This assessment did not validate the live availability or security
+        posture of the identified assets. Findings are based solely on publicly
+        available and historical data.
+    </p>
+
+    <hr />
+
+    <h2 id="appendix-a-passive-data-sources">Appendix A – Passive Data Sources</h2>
+
+    <ul>
+        <li>Whois Databases</li>
+        <li>Certificate Transparency Logs</li>
+        <li>Public DNS Repositories</li>
+        <li>Search Engine Indexes</li>
+        <li>Web Archives</li>
+    </ul>
+
+    <hr />
+
+    <h2 id="appendix-b-artifacts">Appendix B – Artifacts</h2>
+
+    <ul>
+        <li>Raw Passive DNS Records (JSON)</li>
+        <li>Certificate Transparency Logs</li>
+        <li>OSINT References</li>
+    </ul>
+
+    <hr />
+
+    <p><strong>End of Passive Reconnaissance Report</strong></p>
+
+    <h2>Appendix C – Public Documents</h2>
+
+    <table>
+            <thead>
+                <tr class="header">
+                <th>URL</th>
+                <th>Type</th>
+                <th>Information Disclosed</th>
+                </tr>
+            </thead>
+        <tbody>
+            $metadata_full
+        </tbody>
+    </table>
+
+</body>
+
+</html>
+```
