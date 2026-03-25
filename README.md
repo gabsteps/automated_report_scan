@@ -82,7 +82,7 @@ python3 recon.py example.com Gabriel YOUR_API_KEY
 
 ```id="l8sd3q"
 .
-├── recon.py              # Main execution script
+├── recon.py             # Main execution script
 ├── passive.py           # OSINT data collection
 ├── data_filter.py       # WHOIS data processing
 ├── domain.py            # Domain data model
