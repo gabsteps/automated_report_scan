@@ -156,7 +156,7 @@ Any misuse for illegal activities is strictly the responsibility of the user.
 * Web interface
 * Vulnerability detection modules
 * Result caching
-* Choose between passiva/active/mixed report
+* Choose between passive/active/mixed report
 
 ---
 
