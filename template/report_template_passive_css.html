@@ -7,7 +7,6 @@
 
     <style>
 
-        /* ===== Reset básico ===== */
         * {
             margin: 0;
             padding: 0;
@@ -23,7 +22,7 @@
             padding: 40px 20px;
         }
 
-        /* Container principal */
+        /* Main Container */
         .container {
             max-width: 1000px;
             margin: auto;
@@ -55,12 +54,12 @@
             color: #1a365d;
         }
 
-        /* ===== Texto ===== */
+        /* ===== Text ===== */
         p {
             margin: 12px 0;
         }
 
-        /* ===== Notice box (legal notice etc) ===== */
+        /* Notice box (legal notice etc) */
         .notice {{
             background: #fff7e6;
             border-left: 6px solid #f59e0b;
@@ -69,7 +68,7 @@
             border-radius: 6px;
         }}
 
-        /* ===== Executive summary / highlight box ===== */
+        /* Executive summary / highlight box */
         .highlight {{
             background: #edf2f7;
             padding: 20px;
@@ -77,7 +76,7 @@
             margin: 20px 0;
         }}
 
-        /* ===== Tables ===== */
+        /* Tables */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -87,7 +86,7 @@
             overflow: hidden;
         }
 
-        /* Header tabela */
+        /* Header table */
         th {{
             background: #2b6cb0;
             color: white;
@@ -96,7 +95,7 @@
             font-weight: 600;
         }}
 
-        /* Células */
+        /* Cells */
         td {
             padding: 14px;
             border-bottom: 1px solid #e2e8f0;
@@ -107,12 +106,12 @@
             background: #f8fafc;
         }}
 
-        /* Hover tabela (fica bonito no HTML) */
+        /* Hover table */
         tr:hover {{
             background: #edf2f7;
         }}
 
-        /* ===== Lists ===== */
+        /* Lists  */
         ul {
             padding-left: 25px;
             margin: 15px 0;
@@ -122,14 +121,14 @@
             margin: 6px 0;
         }
 
-        /* ===== Separador ===== */
+        /* Separator */
         hr {
             border: none;
             border-top: 1px solid #e2e8f0;
             margin: 40px 0;
         }
 
-        /* ===== Code / technical data ===== */
+        /* Code / technical data */
         code {
             background: #edf2f7;
             padding: 4px 8px;
@@ -137,7 +136,7 @@
             font-size: 14px;
         }
 
-        /* ===== Footer ===== */
+        /* Footer */
         .footer {
             margin-top: 50px;
             padding-top: 20px;
@@ -146,7 +145,7 @@
             font-size: 14px;
         }
 
-        /* ===== Risk levels (se quiser usar depois) ===== */
+        /* Risk levels  */
         .risk-low {
             color: #2f855a;
             font-weight: bold;
@@ -283,31 +282,31 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="odd">
+            <tr class="column">
                 <td>Domain Name</td>
                 <td>$domain_name</td>
             </tr>
-            <tr class="even">
+            <tr class="column">
                 <td>Registrar</td>
                 <td>$registrar</td>
             </tr>
-            <tr class="odd">
+            <tr class="column">
                 <td>Creation Date</td>
                 <td>$generation_date</td>
             </tr>
-            <tr class="even">
+            <tr class="column">
                 <td>Expiration Date</td>
                 <td>$expiration_date</td>
             </tr>
-            <tr class="odd">
+            <tr class="column">
                 <td>Registrant Organization</td>
                 <td>$org</td>
             </tr>
-            <tr class="even">
+            <tr class="column">
                 <td>Registrant Country</td>
                 <td>$country</td>
             </tr>
-            <tr class="odd">
+            <tr class="column">
                 <td>Name Servers</td>
                 <td>$name_servers</td>
             </tr>
@@ -340,7 +339,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="odd">
+            <tr class="table">
                 $dns_records
             </tr>
         </tbody>
