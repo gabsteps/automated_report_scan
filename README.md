@@ -50,6 +50,10 @@ cd automated_report_scan
 ```bash id="a8vn3t"
 pip install -r requirements.txt
 ```
+### Or Windows
+```bash id="a8vn3t"
+python -m pip install -r requirements.txt
+```
 
 ---
 
@@ -67,13 +71,13 @@ You will need a **VirusTotal API Key**:
 ### Basic command
 
 ```bash id="y82kfd"
-python3 recon.py <domain> <username> <api_key>
+python3 recon.py <domain> <"username"> <"api_key">
 ```
 
 ### Example
 
 ```bash id="w3x9lm"
-python3 recon.py example.com Gabriel YOUR_API_KEY
+python3 recon.py example.com "Gabriel" "YOUR_API_KEY"
 ```
 
 ---
