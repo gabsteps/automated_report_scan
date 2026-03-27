@@ -7,8 +7,6 @@
 # BitSec Nov 2, 2025                                    #
 #########################################################
 #!/usr/bin/env python3
-from nis import cat
-
 from passive import get_whois, get_passive_dns, get_subdomains, get_infrastructure, get_archived_docs, build_risk_assessment
 from pdfgenerator import generate_report
 import user
