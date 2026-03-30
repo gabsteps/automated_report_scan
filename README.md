@@ -47,10 +47,12 @@ cd automated_report_scan
 
 ### 2. Install dependencies
 
+### Linux
+
 ```bash id="a8vn3t"
 pip install -r requirements.txt
 ```
-### Or Windows
+### Windows
 ```bash id="a8vn3t"
 python -m pip install -r requirements.txt
 ```
